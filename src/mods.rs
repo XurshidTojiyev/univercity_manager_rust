@@ -16,6 +16,12 @@ pub mod univer_manager {
         pub fn set_class() {}
         pub fn set_class_letter() {}
         pub fn set_teacher() {} 
+        pub fn get_name() {}
+        pub fn get_surname(){}
+        pub fn get_age() {}
+        pub fn get_class() {}
+        pub fn get_class_letter() {}
+        pub fn get_teacher() {}
     }
 
     #[derive(Debug)]
