@@ -28,12 +28,24 @@ pub mod univer_manager {
         pub fn set_teacher(&mut self, teacher: Teacher) {
             self.teacher = teacher;
         } 
-        pub fn get_name() {}
-        pub fn get_surname(){}
-        pub fn get_age() {}
-        pub fn get_class() {}
-        pub fn get_class_letter() {}
-        pub fn get_teacher() {}
+        pub fn get_name(&self) -> String {
+            self.name.to_string()
+        }
+        pub fn get_surname(&self) -> String{
+            self.surname.to_string()
+        }
+        pub fn get_age(&self)->i32 {
+            self.age
+        }
+        pub fn get_class(&self) -> String {
+            self.class.to_string()
+        }
+        pub fn get_class_letter(&self) -> char{
+            self.class_letter
+        }
+        pub fn get_teacher(&self) {
+            self.teacher.about()
+        }
     }
 
     #[derive(Debug)]
@@ -46,6 +58,13 @@ pub mod univer_manager {
     impl Teacher {
         pub fn new(name1: String,surname1: String, age1: i32, subject1: String) -> Teacher {
             Teacher{name: name1, surname: surname1, age: age1, subject: subject1}
+        }
+
+        pub fn about(&self){
+            println!("Name: {}", self.name);
+            println!("Surname: {}", self.surname);
+            println!("Age: {}", self.age);
+            println!("Subject: {}", self.subject);
         }
 
         pub fn get_name(&self) -> String {
