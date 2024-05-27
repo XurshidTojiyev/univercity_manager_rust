@@ -8,6 +8,10 @@ pub mod univer_manager {
         pub teacher: Teacher
     }
 
+    impl pupil {
+        fn new() {}
+    }
+
     #[derive(Debug)]
     pub struct Teacher {
         pub name: String,
