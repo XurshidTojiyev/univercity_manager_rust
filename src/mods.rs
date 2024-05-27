@@ -1,5 +1,6 @@
 pub mod univer_manager {
-    pub struct pupil {
+    #[derive(Debug)]
+    pub struct Pupil {
         pub name: String,
         pub surname: String,
         pub age: i32,
@@ -7,17 +8,19 @@ pub mod univer_manager {
         pub class_letter: char,
         pub teacher: Teacher
     }
-
-    impl pupil {
-        pub fn new() {}
+    
+    impl Pupil {
+        pub fn new(name1: String, surname1: String, age1: i32, class1: i32, class_letter1: char, teacher1: Teacher)->Pupil {
+            Pupil {name: name1, surname: surname1, age: age1, class: class1, class_letter: class_letter1, teacher: teacher1}
+        }
         pub fn set_name(&mut self, name: String) {
             self.name = name.to_string()
         }
         pub fn set_surname(&mut self, surname: String) {
             self.surname = surname.to_string()
         }
-        pub fn set_age(&mut self, age: i32) {
-            self.age = age
+        pub fn set_age(&mut self, _age: i32) {
+            self.age = _age
         }
         pub fn set_class(&mut self, class: i32) {
             self.class = class;
@@ -86,12 +89,25 @@ pub mod univer_manager {
         pub fn set_surname(&mut self, surname: String){
             self.surname = surname.to_string()
         }
-        pub fn set_age(&self, age: i32){}
+        pub fn set_age(&mut self, _age: i32){
+            self.age = _age;
+        }
         pub fn set_name(&mut self, name: String){
             self.name = name.to_string()
         }
         pub fn set_subject(&mut self, subject: String){
             self.subject = subject.to_string()
+        }
+    }
+
+    pub struct Subject {
+        pub name: String,
+        pub teacher: Teacher
+    }
+
+    impl Subject {
+        pub fn new(name1: String, teacher1: Teacher) -> Subject {
+            Subject {name: name1, teacher: teacher1}
         }
     }
 }
