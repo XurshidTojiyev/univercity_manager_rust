@@ -9,7 +9,13 @@ pub mod univer_manager {
     }
 
     impl pupil {
-        fn new() {}
+        pub fn new() {}
+        pub fn set_name() {}
+        pub fn set_surname() {}
+        pub fn set_age() {}
+        pub fn set_class() {}
+        pub fn set_class_letter() {}
+        pub fn set_teacher() {} 
     }
 
     #[derive(Debug)]
