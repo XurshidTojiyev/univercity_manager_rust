@@ -10,12 +10,24 @@ pub mod univer_manager {
 
     impl pupil {
         pub fn new() {}
-        pub fn set_name() {}
-        pub fn set_surname() {}
-        pub fn set_age() {}
-        pub fn set_class() {}
-        pub fn set_class_letter() {}
-        pub fn set_teacher() {} 
+        pub fn set_name(&mut self, name: String) {
+            self.name = name.to_string()
+        }
+        pub fn set_surname(&mut self, surname: String) {
+            self.surname = surname.to_string()
+        }
+        pub fn set_age(&mut self, age: i32) {
+            self.age = age
+        }
+        pub fn set_class(&mut self, class: i32) {
+            self.class = class;
+        }
+        pub fn set_class_letter(&mut self, class_letter: char) {
+            self.class_letter = class_letter;
+        }
+        pub fn set_teacher(&mut self, teacher: Teacher) {
+            self.teacher = teacher;
+        } 
         pub fn get_name() {}
         pub fn get_surname(){}
         pub fn get_age() {}
@@ -31,7 +43,6 @@ pub mod univer_manager {
         pub age: i32,
         pub subject: String
     }
-
     impl Teacher {
         pub fn new(name1: String,surname1: String, age1: i32, subject1: String) -> Teacher {
             Teacher{name: name1, surname: surname1, age: age1, subject: subject1}
