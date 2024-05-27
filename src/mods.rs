@@ -109,5 +109,13 @@ pub mod univer_manager {
         pub fn new(name1: String, teacher1: Teacher) -> Subject {
             Subject {name: name1, teacher: teacher1}
         }
+
+        pub fn get_name(&self) -> String{
+            self.name.to_string()
+        }
+
+        pub fn get_teacher(&self) {
+            self.teacher.about()
+        }
     }
 }
