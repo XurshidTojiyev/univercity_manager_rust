@@ -7,5 +7,4 @@ fn main() {
     p1.set_name("Halima".to_string());
 
     println!("{:?}", p1);
-    println!("Xurshid salom")s
 }
