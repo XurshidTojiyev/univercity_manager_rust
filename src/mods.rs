@@ -13,10 +13,11 @@ pub mod univer_manager {
         pub fn new(name1: String, surname1: String, age1: i32, class1: i32, class_letter1: char, teacher1: Teacher)->Pupil {
             Pupil {name: name1, surname: surname1, age: age1, class: class1, class_letter: class_letter1, teacher: teacher1}
         }
+
         pub fn set_name(&mut self, name: String) {
             self.name = name.to_string()
         }
-        pub fn set_surname(&mut self, surname: String) {
+        pub fn set_surname(&mut self, surname: String){ 
             self.surname = surname.to_string()
         }
         pub fn set_age(&mut self, _age: i32) {
@@ -82,7 +83,7 @@ pub mod univer_manager {
             self.age
         }
 
-        pub fn get_subject(&self) -> String{
+        pub fn get_subject(&self) ->String{
             self.subject.to_string()
         }
 
@@ -96,26 +97,7 @@ pub mod univer_manager {
             self.name = name.to_string()
         }
         pub fn set_subject(&mut self, subject: String){
-            self.subject = subject.to_string()
-        }
-    }
-
-    pub struct Subject {
-        pub name: String,
-        pub teacher: Teacher
-    }
-
-    impl Subject {
-        pub fn new(name1: String, teacher1: Teacher) -> Subject {
-            Subject {name: name1, teacher: teacher1}
-        }
-
-        pub fn get_name(&self) -> String{
-            self.name.to_string()
-        }
-
-        pub fn get_teacher(&self) {
-            self.teacher.about()
+            self.subject = subject
         }
     }
 }
